@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+
+<main class="container mt-3">
+
+    <p  {{mode}}> новых пациентов: {{a}}</p>
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th><a href='/sort/by_index'>ID</a></th>
+            <th><a href='/sort/by_name'>Name</a></th>
+            <th><a href="/sort/by_birth">BirthDate</a></th>
+            <th><a href="/sort/by_study"> StudyDate </a></th>
+            <th><a href='/sort/by_modality'>Modality</a></th>
+            <th><a href='/sort/by_report'>Reports</a></th>
+        <tr>
+        </thead>
+        <tbody>
+        {% for i in by_index %}
+
+        <tr>
+            <td>{{ i[1] }}</td>
+            <td>{{ i[3] }}</td>
+            <td>{{ i[0] }}</td>
+            <td>{{ i[5] }}</td>
+            <td>{{ i[2] }}</td>
+            <td><a href='/add_report/{{i[1]}}/{{i[5]}}'>{% if i[4]|length < 2 %} no  {% else %}  yes {% endif %}       </a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    <section>
+        {%for c in category%}
+        <h3 class="my-4">{{c.title}}</h3>
+
+        <div class="row mt-4">
+            {%for m in triple_meal[c.id|int-1]%}
+
+            {%if m.category.id == c.id%}
+            <div class="col-12 col-md-4">
+                <div class="card mb-3">
+                    <img src="{{url_for('static',filename='/pictures/'+m.picture)}}" width="300" height="200"
+                         class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4 class="h5 card-title">{{m.title}}</h4>
+                        <p class="card-text">{{m.description}}</p>
+                        <a href="/addtocart/{{m.title}}/" btn btn-danger">В корзину </a>
+                    </div>
+                </div>
+            </div>
+
+            {%endif%}
+            {%endfor%}
+            {%endfor%}
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

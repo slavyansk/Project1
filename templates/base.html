@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>DICOM_REPORTER</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <header class="container mt-3">
+    <nav class="py-1 navbar navbar-dark bg-dark">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+        <a href="/" class=" h5 my-2 text-white bg-dark">DICOM reporter</a>
+
+      </ul>
+      <a href="/cart" class="my-2 text-white bg-dark "></a>
+
+      <a href="/refresh" class="btn btn-light btn-sm ml-4 {{mode_logoff}}">Refresh</a>
+    </nav>
+  </header>
+
+  <div class="container">
+      {% block container %} {% endblock %}
+  </div>
+
+
+
+  <footer class="footer">
+    <nav class="container navbar navbar-light bg-light">
+      <ul class="navbar-nav mr-auto">
+        <p class="h4 nav-link"></p>
+      </ul>
+
+    </nav>
+  </footer>
+
+</body>
+</html>

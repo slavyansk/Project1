@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+<head>
+    <title>Request | Stepik Delivery</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+{% if error_msg: %}
+<div>
+    {{ error_msg }}
+</div>
+{% endif %}
+
+<body class="my-4 py-4">
+<main class="container">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>BirthDate</th>
+            <th>StudyDate</th>
+            <th>Modality</th>
+
+        <tr>
+        </thead>
+        <tbody>
+        {% for i in info%}
+        <tr>
+            <td>{{ i[1] }}</td>
+            <td>{{ i[3] }}</td>
+            <td>{{ i[0] }}</td>
+            <td>{{ i[5] }}</td>
+            <td>{{ i[2] }}</td>
+        </tr>
+
+        </tbody>
+    </table>
+        <form action="/save/{{i[1]}}/{{i[5]}}/" method="POST" class="navbar-nav mr-auto mt-2 mt-lg-3">
+            {{ form.name }}
+            <input type="submit" value="Сохранить" class="btn btn-primary btn-lg mt-3">
+        </form>
+ {% endfor %}
+
+
+    </div>
+
+
+</main>
+
+
+</body>
+
+
+</html>
+
+
+{% endblock %}
