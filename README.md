@@ -1,6 +1,7 @@
 # DICOM_reporter
 flask-based app to create database from dicom images in folder and write medical reports
 
+![1](https://user-images.githubusercontent.com/44552657/92303350-2f7a2400-ef74-11ea-96fa-d477270593e5.png)
 
 1.config.py - set folder (path), to which images will be sent.
 
@@ -13,7 +14,6 @@ flask-based app to create database from dicom images in folder and write medical
 5. by default all reports create with empty field. App support create and save into dataframe report text field, whuch can be edited.
 
 
-![1](https://user-images.githubusercontent.com/44552657/92303350-2f7a2400-ef74-11ea-96fa-d477270593e5.png)
 ![2](https://user-images.githubusercontent.com/44552657/92303352-30ab5100-ef74-11ea-982e-f1e062c72c0c.png)
 
 
