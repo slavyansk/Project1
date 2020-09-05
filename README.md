@@ -15,8 +15,9 @@ flask-based app to create database from dicom images in folder and write medical
 status of project: MVP/demo
 
 in next step:
-auto add .rtf reports instead empty field, if .rtf report exists
-expansion to .dicom files
-add postgresql-based database
-search by all tags
-add DICOM_viewer
+1. reformat code, replace all globals by classes
+2. auto add .rtf reports instead empty field, if .rtf report exists
+3. expansion to .dicom files not only .bin
+4. add postgresql-based database
+5. search by all tags
+6. add DICOM_viewer
