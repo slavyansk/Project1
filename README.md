@@ -5,11 +5,11 @@
 
 1.config.py - set folder (path), to which images will be sent.
 
-2 initialise() and write_to_db() defs create DataFrame based database according DICOM-tags of all ".bin" files in path.
+2. initialise() and write_to_db() defs create DataFrame based database according DICOM-tags of all ".bin" files in path.
 
-3. refresh burtton in main.html add new patient ino dataframe
+3. refresh burtton in main.html add new patient ino dataframe.
 
-4. App support main table sorting by all columns (study date, birth date, modality, exist report or not exist, id, patient name)
+4. App support main table sorting by all columns (study date, birth date, modality, exist report or not exist, id, patient name).
 
 5. by default all reports create with empty field. App support create and save into dataframe report text field, whuch can be edited.
 
