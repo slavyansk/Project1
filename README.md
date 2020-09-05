@@ -1,4 +1,4 @@
-# DICOM_reporter : flask-based app for medical reports
+## flask-based app for creating medical reports
 
 
 ![2](https://user-images.githubusercontent.com/44552657/92303352-30ab5100-ef74-11ea-982e-f1e062c72c0c.png)
