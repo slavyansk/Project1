@@ -3,7 +3,7 @@
 
 ![2](https://user-images.githubusercontent.com/44552657/92303352-30ab5100-ef74-11ea-982e-f1e062c72c0c.png)
 
-1.config.py - set folder (path), to which images will be sent.
+1. config.py - set folder (path), to which images will be sent.
 
 2. initialise() and write_to_db() defs create DataFrame based database according DICOM-tags of all ".bin" files in path.
 
