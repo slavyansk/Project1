@@ -1,0 +1,1 @@
+path = '/media/alex/Новый том1/DICOM_TEST/'
